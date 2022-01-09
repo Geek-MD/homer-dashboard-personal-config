@@ -1,0 +1,101 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/icons for icons options
+
+title: "Raspi Dashboard"
+subtitle: "Raspberry Pi 3B"
+icon: "fab fa-raspberry-pi"
+# logo: "logo.png"
+
+header: true
+footer: '<p>Powered by <a href="https://github.com/bastienwirtz/homer">Homer<img style="height:1rem; width:auto; pad>
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#2E3440"
+    highlight-secondary: "#4C566A"
+    highlight-hover: "#81A1C1"
+    background: "#3B4252"
+    card-background: "#2E3440"
+    text: "#D8DEE9"
+    text-header: "#D8DEE9"
+    text-title: "#81A1C1"
+    text-subtitle: "#81A1C1"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link-hover: "#BF616A"
+
+# Optional message
+# message:
+  # url: https://b4bz.io
+  # style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  # title: "Demo !"
+  # icon: "fa fa-grin"
+  # content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirt>
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+# links:
+  # - name: "Contribute"
+    # icon: "fab fa-github"
+    # url: "https://github.com/bastienwirtz/homer"
+    # target: "_blank" # optional html a tag target attribute
+  # - name: "Wiki"
+    # icon: "fas fa-book"
+    # url: "https://www.wikipedia.org/"
+  # this will link to a second homer page that will load config from additionnal-page.yml and keep default config va>
+  # see url field and assets/additionnal-page.yml.dist used in this example:
+  # - name: "another page!"
+    # icon: "fas fa-file-alt"
+    # url: "#additionnal-page" 
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not>
+services:
+  - name: "Docker Services"
+    icon: "fab fa-docker"
+    items:
+      - name: "Portainer"
+        logo: "assets/icons/homer-icons/png/portainer.png"
+        subtitle: "Container Manager"
+        tag: "srv"
+        url: "https://raspi-ip:9443/#!/auth"
+        target: "_blank"
+  - name: "Home Automation"
+    icon: "fas fa-home"
+    items:
+      - name: "HomeBridge"
+        logo: "assets/icons/homer-icons/png/homebridge.png"
+        subtitle: "HomeKit support for the impatient"
+        tag: "srv"
+        url: "http://raspi-ip:8080"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Home Assistant"
+        logo: "assets/icons/homer-icons/png/home-assistant.png"
+        subtitle: "Awaken your home"
+        tag: "srv"
+        url: "http://raspi-ip:8123"
+        target: "_blank"
+  - name: "Programming"
+    icon: "fas fa-code"
+    items:
+      - name: "GitHub"
+        logo: "assets/icons/homer-icons/png/github.png"
+        subtitle: ""
+        tag: "web"
+        url: "https://github.com/Geek-MD"
+        target: "_blank"
